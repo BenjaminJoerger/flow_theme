@@ -39,7 +39,7 @@
     [{/block}]
 
     [{block name="sidebar_news"}]
-        [{if $oxcmp_news|is_array && $oxcmp_news|count}]
+        [{if !empty($oxcmp_news) && $oxcmp_news|count}]
             [{include file="widget/sidebar/news.tpl" oNews=$oxcmp_news}]
         [{/if}]
     [{/block}]
